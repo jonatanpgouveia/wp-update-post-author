@@ -3,10 +3,10 @@ function update_all_posts_init()
 { ?>
     <div class="container">
       <div class="jumbotron">
-        <h2>Apiki WP Corrigi Posts</h2>
-        <p>O plugin irá atualizar todos os posts em massa para corrigir a descrição do autor nos posts mais antigos.</p>
+        <h2>WP Update Post Author</h2>
+        <p>This plugin was developed with the purpose of correcting the posts that may be unrelated to the author.</p>
         <div class="alert alert-info" role="alert">
-          <strong>Atenção! </strong>A atualização irá aplicar o usuário logado como o autor dos posts que estão com erros no front.
+          <strong>Attention! </strong>The update will apply the logged in user as the author of the posts that are with errors on the front.
         </div>
         <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
           <input type="hidden" name="poststatus" value="poststatus">
@@ -17,22 +17,22 @@ function update_all_posts_init()
     <div class="container sucess" style="display: none;">
       <div class="jumbotron">
         <div class="alert alert-success" role="alert">
-          <strong>SUCESSO! </strong>todos os posts foram alteradas.
+          <strong>Success! </strong> All posts were changed.
         </div>
         <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
           <input type="hidden" name="poststatus" value="poststatus">
-          <button type="submit" id="uploadNow" data-loading-text="Loading..." class="btn btn-primary">Nova Atualização</button>
+          <button type="submit" id="uploadNow" data-loading-text="Loading..." class="btn btn-primary">New Update</button>
         </form>
       </div>
     </div>
     <div class="container info" style="display: none;">
       <div class="jumbotron">
         <div class="alert alert-success" role="alert">
-          <strong>Informação! </strong>Nenhum post foi atualizado!
+          <strong>Information! </strong>No posts have been updated!
         </div>
         <form method="POST" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
           <input type="hidden" name="poststatus" value="poststatus">
-          <button type="submit" id="uploadNow" data-loading-text="Loading..." class="btn btn-primary">Tentar de novo</button>
+          <button type="submit" id="uploadNow" data-loading-text="Loading..." class="btn btn-primary">Try again?</button>
         </form>
       </div>
     </div>
